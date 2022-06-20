@@ -1,4 +1,70 @@
-body {
-  background-color: black;
-  color: white;
+body{
+  background-color: rgb(241, 241, 241);
+  margin: 0px;
+}
+
+.intro {
+  display: grid;
+  justify-content: center;
+}
+
+.project-section {
+  display: grid;
+  justify-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.project-container {
+  display:grid;
+  grid-template-columns: repeat(3,minmax(300px, 1fr));
+  gap: 40px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.project-card {
+  box-shadow: 10px 10px 5px black;
+  max-width: fit-content;
+  background-color: white;
+}
+
+.project-photo {
+  min-width: 300px;
+  min-height: 200px;
+}
+
+.details-top{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  border-bottom: 1px solid black;
+}
+
+.project-links{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.details-top{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.details-bottom{
+  margin: 20px;
+}
+
+.contact-section, .project-photo, .intro {
+  background-color: rgb(122, 187, 230);
+}
+
+.contact-section {
+  display: grid;
+  justify-items: center;
+}
+
+@media (max-width: 600px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
 }
