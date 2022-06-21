@@ -6,14 +6,28 @@ body{
 .intro {
   display: grid;
   justify-content: center;
+  background: linear-gradient(138deg, rgb(16, 49, 235), rgb(245, 143, 26));
+  position: relative;
 }
+
+.intro-name, .intro-picture, .about-me, .about-me-text {
+  display: grid;
+  justify-items: center;
+}
+
+.about-me-text {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 
 .project-section {
   display: grid;
   justify-items: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
+  background: linear-gradient(54deg, rgb(16, 49, 235), rgb(245, 143, 26))
 }
+
 .project-container {
   display:grid;
   grid-template-columns: repeat(3,minmax(300px, 1fr));
@@ -54,23 +68,50 @@ body{
   margin: 20px;
 }
 
-.contact-section, .project-photo, .intro {
+.project-photo {
   background-color: rgb(122, 187, 230);
 }
 
 .contact-section {
   display: grid;
   justify-items: center;
+  background: linear-gradient(5deg, rgb(16, 49, 235) 40%, rgb(245, 143, 26));
 }
 
 @media (max-width: 1200px) {
   .project-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  @media (min-width:601px){
+
+    .intro {
+      
+    }
+    .about-me {
+      background: none;
+      background-color: white;
+      height: 400px;
+      width: 600px;
+    }
+  }
 }
 
 @media (max-width: 600px) {
   .project-container {
     grid-template-columns: 1fr;
+  }
+
+  .intro {
+    background: linear-gradient(345deg, rgb(16, 49, 235), rgb(245, 143, 26));
+  }
+
+  .intro-name {
+    visibility: hidden;
+  }
+
+  .project-section {
+    padding-bottom: 40px;
+    background: linear-gradient(170deg, rgb(16, 49, 235), rgb(245, 143, 26))
   }
 }

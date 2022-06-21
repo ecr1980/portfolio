@@ -10,17 +10,23 @@
     </head>
     <body>
         <div class="intro">
-          <div><h1>Eric Romano</h1></div>
-          <div>This is where my picture would go.</div>
+          <div class="intro-name"><h1>Eric Romano</h1></div>
+          <div class="intro-picture">
+            <picture>
+              <source media="(min-width: 600px)" srcset="assets/cat-600.png">
+              <source media="(max-width: 599px)" srcset="assets/littlecat.png">
+              <img src="assets/cat-800.png" alt="Image of a cat, Eric Romano">
+            </picture>
+          </div>
           <div class="about-me">
             <h2>About me</h2>
             <div class="about-me-text">
-              <p>This is a short paragraph describing myself. It will include a bit about my past and the direction I am aiming for in the future.</p>
+              <p>This is a short paragraph describing myself. It will include a bit about my past and the direction I am aiming for in the future. This needs a lot more text for testing purposes. You see, when I narrow the viewing screen to that of a mobile device, this text is not centered even though it should be. I am guessing I made a mistake with CSS, but in order to test it, I need text that would span the entire screen even when fully expanded.</p>
             </div>
           </div>
         </div>
         <div class="project-section">
-          <h2>Personal Projects below:</h2>
+          <h2>Personal Projects:</h2>
           <div class="project-container">
             <div class="project-card">
               <div class="project-photo">
