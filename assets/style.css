@@ -3,17 +3,21 @@ body{
   margin: 0px;
 }
 
+.image {
+  max-width: 500px;
+}
 .intro {
   display: grid;
   justify-content: center;
-  background: linear-gradient(138deg, rgb(16, 49, 235), rgb(245, 143, 26));
   position: relative;
+  background: linear-gradient(138deg, rgb(16, 49, 235), rgb(245, 143, 26));
 }
 
-.intro-name, .intro-picture, .about-me, .about-me-text {
-  display: grid;
-  justify-items: center;
+.intro-name {
+  color: white;
 }
+
+
 
 .about-me-text {
   margin-left: 20px;
@@ -25,12 +29,10 @@ body{
   display: grid;
   justify-items: center;
   padding-bottom: 40px;
-  background: linear-gradient(54deg, rgb(16, 49, 235), rgb(245, 143, 26))
 }
 
 .project-container {
   display:grid;
-  grid-template-columns: repeat(3,minmax(300px, 1fr));
   gap: 40px;
   margin-left: 25%;
   margin-right: 25%;
@@ -40,6 +42,7 @@ body{
   box-shadow: 10px 10px 5px black;
   max-width: fit-content;
   background-color: white;
+  color: black;
 }
 
 .project-photo {
@@ -78,6 +81,64 @@ body{
   background: linear-gradient(5deg, rgb(16, 49, 235) 40%, rgb(245, 143, 26));
 }
 
+@media (min-width: 1201px) {
+
+  .image {
+    height: 350px;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(3,minmax(300px, 1fr));
+  }
+
+  .project-section {
+    background: linear-gradient(54deg, rgb(16, 49, 235), rgb(245, 143, 26))
+  }
+
+  .intro-box {
+    width: 900px;
+    height: 500px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-template-rows: repeat(auto-fill, 50px);
+  }
+  .intro-picture {
+    grid-row: 3/10;
+    grid-column-start: 1;
+    width: 500px;
+    box-shadow: 10px 10px 5px black;
+  }
+
+  .about-me {
+    background: none;
+    background-color: white;
+    height: 250px;
+    width: 400px;
+    grid-column-start: 6;
+    grid-row-start: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    box-shadow: 10px 10px 5px black;
+  }
+
+  .about-me-elems {
+    text-align: center;
+    grid-column-start: 1;
+  }
+
+  .about-me-text {
+    grid-column: 1/3;
+    text-align: justify;
+  }
+
+  .filler{
+    visibility: hidden;
+  }
+
+}
+
 @media (max-width: 1200px) {
   .project-container {
     grid-template-columns: 1fr 1fr;
@@ -85,15 +146,63 @@ body{
 
   @media (min-width:601px){
 
-    .intro {
-      
+    .intro-box {
+      width: 600px;
+      height: 500px;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 100px);
+      grid-template-rows: repeat(auto-fill, 100px);
     }
+
+    .intro-picture {
+      grid-row-start: 2;
+      grid-column-start: 1;
+      width: 400px;
+      height: 279px;
+      z-index: 1;
+      box-shadow: 10px 10px 5px black;
+    }
+
     .about-me {
       background: none;
       background-color: white;
-      height: 400px;
-      width: 600px;
+      height: 300px;
+      width: 400px;
+      grid-column-start: 3;
+      grid-row-start: 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 4fr;
+      box-shadow: 10px 10px 5px black;
     }
+
+    .about-me-elems {
+      text-align: center;
+    }
+
+    .about-me-text {
+      grid-column: 1/3;
+      text-align: justify;
+    }
+
+    .filler{
+      height: 120px;
+      width: 200px;
+      float: left;
+      margin: 5px;
+    }
+
+
+
+    .about-me-elems {
+      grid-column-start: 2;
+    }
+
+    .project-section {
+      background: linear-gradient(65deg, rgb(16, 49, 235), rgb(245, 143, 26))
+    }
+
   }
 }
 
@@ -104,6 +213,7 @@ body{
 
   .intro {
     background: linear-gradient(345deg, rgb(16, 49, 235), rgb(245, 143, 26));
+    color: white;
   }
 
   .intro-name {
@@ -112,6 +222,12 @@ body{
 
   .project-section {
     padding-bottom: 40px;
-    background: linear-gradient(170deg, rgb(16, 49, 235), rgb(245, 143, 26))
+    background: linear-gradient(170deg, rgb(16, 49, 235), rgb(245, 143, 26));
+    color: white;
+  }
+
+  .intro-name, .intro-picture, .about-me, .about-me-text {
+    display: grid;
+    justify-items: center;
   }
 }
